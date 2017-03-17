@@ -1,10 +1,9 @@
 var express = require('express');
 var path = require('path');
-
 var bodyParser = require('body-parser');
 
 //connect to the mongoDB
-var db = require('mongoskin').db("mongodb://localhost:27017/sced", { w: 0});
+var db = require('mongoskin').db("mongodb://localhost:27017/datdabase243", { w: 0});
     db.bind('event');
 
 //create express app, use public folder for static files
@@ -12,19 +11,18 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 //is necessary for parsing POST request
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.get('/init', function(req, res){
     db.event.insert({ 
         text:"My test event A", 
-        start_date: new Date(2017,2,1),
-        end_date:   new Date(2017,2,2),
-        color: "green"
+        start_date: new Date(2013,8,1),
+        end_date:   new Date(2013,8,5)
     });
     db.event.insert({ 
         text:"One more test event", 
-        start_date: new Date(2017,2,3),
-        end_date:   new Date(2017,2,8),
+        start_date: new Date(2013,8,3),
+        end_date:   new Date(2013,8,8),
         color: "#DD8616"
     });
 
@@ -71,9 +69,9 @@ app.post('/data', function(req, res){
         res.send("<data><action type='"+mode+"' sid='"+sid+"' tid='"+tid+"'/></data>");
     }
 
-    //run db operation
+     //run db operation
     if (mode == "updated")
-        db.event.updateById(sid, data, update_response);
+        db.event.updateById( sid, data, update_response);
     else if (mode == "inserted")
         db.event.insert(data, update_response);
     else if (mode == "deleted")
@@ -83,4 +81,4 @@ app.post('/data', function(req, res){
 });
 
 app.listen(3000);
-console.log("Server is running ...");
+console.log("Running on 3000...");
