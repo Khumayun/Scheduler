@@ -3,7 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 //connect to the mongoDB
-var db = require('mongoskin').db("mongodb://localhost:27017/datdabase243", { w: 0});
+var db = require('mongoskin').db("mongodb://localhost:27017/testbd", { w: 0});
     db.bind('event');
 
 //create express app, use public folder for static files
