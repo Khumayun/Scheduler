@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SilkRoad Exp - Pickup order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Open Sans font from Google CDN -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+    <!-- Pixel Admin's stylesheets -->
+    <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/pixel-admin.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/pages.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+    <script src="assets/javascripts/my.js"></script>
+    <!--[if lt IE 9]>
+		<script src="assets/javascripts/ie.min.js"></script>
+		<![endif]-->
+</head>
+
+<body class="theme-default main-menu-animated page-profile">
+    <script>
+    var innitiate = [];
+    </script>
+    <div id="main-wrapper">
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+            <div class="navbar-inner">
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <!-- Logo -->
+                    <a href="index.html" class="navbar-brand">
+                        <div><img alt="Pixel Admin" src="assets/images/pixel-admin/main-navbar-logo.png"></div>
+                        SilkRoad Exp
+                    </a>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <li class="nav-icon-btn nav-icon-btn-danger dropdown">
+                                    <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">5</span>
+                                        <i class="nav-icon fa fa-bullhorn"></i>
+                                        <span class="small-screen-text">Новые событие</span>
+                                    </a>
+                                    <!-- NOTIFICATIONS -->
+                                    <!-- Javascript -->
+                                    <script>
+                                    innitiate.push(function() {
+                                        $('#main-navbar-notifications').slimScroll({
+                                            height: 250
+                                        });
+                                    });
+                                    </script>
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
+                                        <div class="notifications-list" id="main-navbar-notifications">
+                                            <div class="notification">
+                                                <div class="notification-title text-danger">SYSTEM</div>
+                                                <div class="notification-description"><strong>Error 500</strong>: Syntax error in index.php at line <strong>461</strong>.</div>
+                                                <div class="notification-ago">12h ago</div>
+                                                <div class="notification-icon fa fa-hdd-o bg-danger"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-danger">ОШИБКА</div>
+                                                <div class="notification-description"><strong>Заказ - <a href="#">Id заказа</a> </strong>:При доставке вышло ошибка.</div>
+                                                <div class="notification-ago">1.01.2017 12:00</div>
+                                                <div class="notification-icon fa fa-warning bg-danger"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-info">ДОСТАВЛЯЕТСЯ</div>
+                                                <div class="notification-description"><strong>Заказ - <a href="#">Id заказа</a> </strong>:При доставке
+                                                    <br/> вышло ошибка.</div>
+                                                <div class="notification-ago">1.01.2017 12:00</div>
+                                                <div class="notification-icon fa fa-truck bg-info"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-success">ОЖИДАНИЕ</div>
+                                                <div class="notification-description"><strong>Заказ - <a href="#">Id заказа</a> </strong>:При доставке
+                                                    <br/> вышло ошибка.</div>
+                                                <div class="notification-ago">1.01.2017 12:00</div>
+                                                <div class="notification-icon fa fa-clock-o bg-success"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                        </div>
+                                        <!-- / .notifications-list -->
+                                        <a href="#" class="notifications-link">Еще...</a>
+                                    </div>
+                                    <!-- / .dropdown-menu -->
+                                </li>
+                                <li>
+                                    <form class="navbar-form pull-left">
+                                        <input type="text" class="form-control" placeholder="Поиск...">
+                                    </form>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+                                        <span>Super Adminjon</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><span class="label label-warning pull-right">New</span>Profile</a></li>
+                                        <li><a href="#"><span class="badge badge-primary pull-right">New</span>Account</a></li>
+                                        <li><a href="#"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="pages-signin.html"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- / .navbar-nav -->
+                        </div>
+                        <!-- / .right -->
+                    </div>
+                </div>
+                <!-- / #main-navbar-collapse -->
+            </div>
+            <!-- / .navbar-inner -->
+        </div>
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner">
+                <ul class="navigation">
+                    <li>
+                        <a href="myindex.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Главная</span></a>
+                    </li>
+                    <li>
+                        <a href="my_order.html"><i class="menu-icon fa fa-th-large"></i><span class="mm-text">Заказы</span></a>
+                    </li>
+                    <li>
+                        <a href="costomers_.html"><i class="menu-icon fa fa-users"></i><span class="mm-text">Клиенты</span></a>
+                    </li>
+                    <li>
+                        <a href="users.html"><i class="menu-icon fa fa-user"></i><span class="mm-text">Пользователи</span></a>
+                    </li>
+                    <li>
+                        <a href="my_order.html"><i class="menu-icon fa fa-shopping-cart"></i><span class="mm-text">Магазин</span></a>
+                    </li>
+                    <li>
+                        <a href="Reporting.html"><i class="menu-icon fa fa-bar-chart-o"></i><span class="mm-text">Отчеты</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-bar-chart-o"></i><span class="mm-text">Настройки</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="set1_.html"><span class="mm-text">Weight charge rates</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="set2_.heml"><span class="mm-text">Delivery charge rates</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="forms-advanced.html"><span class="mm-text">Pickup charge rates</span></a>
+                            </li>
+                    </li>
+                    </ul>
+                    </li>
+                </ul>
+                <!-- / .navigation -->
+                <div class="menu-content">
+                    <a href="pages-invoice.html" class="btn btn-primary btn-block btn-outline dark">Инструкция</a>
+                </div>
+            </div>
+            <!-- / #main-menu-inner -->
+        </div>
+        <!-- / #main-menu -->
+        <div id="content-wrapper">
+            <div class="profile-full-name">
+                Orders > <span class="text-semibold">New Pickup order</span>
+            </div>
+            <div class="profile-row">
+                <div class="right-col">
+                    <hr class="profile-content-hr no-grid-gutter-h">
+                    <div class="profile-content">
+                        <ul id="profile-tabs" class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#profile-tabs-board" data-toggle="tab">Details</a>
+                            </li>
+                            <li>
+                                <a href="#profile-tabs-following" data-toggle="tab">Order details</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content tab-content-bordered panel-padding">
+                            <div class="widget-article-comments tab-pane panel no-padding no-border fade in active" id="profile-tabs-board">
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Номер телефона</label>
+                                    <div class="input-group col-sm-6">
+                                        <input type="text" placeholder="Номер телефона: (999) 999-9999" class="form-control form-group-margin" id="masked-inputs-examples-phone">
+                                    </div>
+                                </div>
+                                <hr class="no-panel-padding-h panel-wide">
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Номер телефона</label>
+                                    <div class="input-group col-sm-6">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+											<button class="btn" type="button">Добавить</button>
+										</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Имя клиента</label>
+                                    <div class="input-group col-sm-6">
+                                        <input type="text" class="form-control form-group-margin">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail2" class="col-sm-1 control-label">Email</label>
+                                    <div class="input-group col-sm-6">
+                                        <input type="text" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Адрес 1</label>
+                                    <div class="input-group col-sm-6">
+                                        <input type="text" placeholder="Адрес" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Адрес 2</label>
+                                    <div class="input-group col-sm-6">
+                                        <input type="text" placeholder="Адрес" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country" class="col-sm-1 control-label">Страна/Город</label>
+                                    <div class="input-group col-sm-6">
+                                        <select id="jquery-select2-example" class="form-control">
+                                            <option></option>
+                                            <optgroup label="США">
+                                                <option value="AL">Айдахо</option>
+                                                <option value="AR">Айова</option>
+                                                <option value="IL">Алабама</option>
+                                                <option value="IA">Аляска</option>
+                                                <option value="KS">Аризона</option>
+                                                <option value="KY">Арканзас</option>
+                                                <option value="LA">Вайоминг</option>
+                                                <option value="MN">Вашингтон</option>
+                                                <option value="MS">Вермонт</option>
+                                                <option value="MO">Виргиния</option>
+                                                <option value="OK">Гавайи</option>
+                                                <option value="SD">Делавэр</option>
+                                                <option value="AR">Джорджия</option>
+                                                <option value="IL">Западная Виргиния</option>
+                                                <option value="IA">Иллинойс</option>
+                                                <option value="KS">Индиана</option>
+                                                <option value="KY">Калифорния</option>
+                                                <option value="LA">Канзас</option>
+                                                <option value="MN">Колорадо</option>
+                                                <option value="MS">Коннектикут</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">Post Code </label>
+                                    <div class="input-group col-sm-6">
+                                        <input type="text" placeholder="Введите..." class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <hr class="no-panel-padding-h panel-wide">
+                                <div class="comment">
+                                    <span class="text-semibold cloud">   	Customer support note:</span>
+                                    <img src="assets/demo/avatars/1.jpg" alt="" class="comment-avatar">
+                                    <div class="comment-body">
+                                        <form action="" id="leave-comment-form" class="comment-text no-padding no-border">
+                                            <textarea class="form-control" rows="1"></textarea>
+                                            <div class="expanding-input-hidden" style="margin-top: 10px;">
+                                                <button class="btn btn-primary pull-right">Leave Message</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- / .comment-body -->
+                                </div>
+                            </div>
+                            <!-- / .tab-pane -->
+                            <div class="tab-pane fade widget-followers" id="profile-tabs-following">
+                                <div class="calendar" width="100%" style="height: 600px;">
+
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-sm-6">
+                                <button class="btn btn-danger">Cancel</button>
+                                <button class="btn btn-success">Confirm order</button>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- / .tab-pane -->
+                </div>
+                <!-- / .tab-content -->
+            </div>
+        </div>
+    </div>
+    <!-- / #content-wrapper -->
+    <div id="main-menu-bg">
+    </div>
+    <script type="text/javascript">
+    window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">' + "<" + "/script>");
+    </script>
+    <!-- Pixel Admin's javascripts -->
+    <script src="assets/javascripts/bootstrap.min.js"></script>
+    <script src="assets/javascripts/pixel-admin.min.js"></script>
+    <script type="text/javascript">
+    innitiate.push(function() {
+        $('#profile-tabs').tabdrop();
+
+        $("#leave-comment-form").expandingInput({
+            target: 'textarea',
+            hidden_content: '> div',
+            placeholder: 'Write message',
+            onAfterExpand: function() {
+                $('#leave-comment-form textarea').attr('rows', '3').autosize();
+            }
+        });
+    })
+    window.PixelAdmin.start(innitiate);
+    </script>
+</body>
+
+</html>
